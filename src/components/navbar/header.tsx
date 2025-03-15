@@ -15,9 +15,11 @@ export const Header = () => {
     };
 
     return (
-        <header className="bg-white py-1 min-w-full fixed top-0 z-50 shadow-lg">
-            <div className="w-full 2xl:max-w-[1320px] mx-auto px-[25px] lg:px-[100px] 2xl:px-[80px]">
-                <div className="flex justify-between items-center gap-8 py-4">
+        <header className="bg-white min-w-full fixed top-0 z-50 shadow-lg">
+            <div className="container mx-auto px-4">
+                {/* Grid Layout for Desktop */}
+                <div className="grid grid-cols-[auto_1fr_auto] items-center gap-10 py-4">
+                    {/* Logo */}
                     <Link href="/">
                         <Image
                             src={logo}
@@ -28,70 +30,20 @@ export const Header = () => {
                         />
                     </Link>
 
-                    <button onClick={toggleMenu} className="xl:hidden">
-                        {isMenuOpen ? (
-                            <X className="text-black cursor-pointer" size={32} strokeWidth={1}/>
-                        ) : (
-                            <Menu className="text-black cursor-pointer" size={32} strokeWidth={1}/>
-                        )}
-                    </button>
+                    {/* Search Bar */}
+                    <div className="relative hidden xl:block">
+                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#989898]"
+                                size={24}/>
+                        <Input
+                            type="text"
+                            placeholder="Search..."
+                            className="pl-12 pr-4 py-3 bg-[#F5F5F5] text-[#656565] rounded-md w-full focus:outline-none placeholder:text-sm placeholder:font-medium"
+                        />
+                    </div>
 
-                    {/*Dropdown menu for medium and small devices*/}
-                    {isMenuOpen && (
-                        <div className="absolute top-16 left-0 right-0 bg-white z-50 shadow-lg xl:hidden m-10 p-3">
-                            <div className="flex flex-col gap-6 p-6">
-                                <div className="relative max-w-md">
-                                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#989898]"
-                                            size={24}/>
-                                    <Input
-                                        type="text"
-                                        placeholder="Search..."
-                                        className="pl-12 pr-4 py-4 bg-[#F5F5F5] text-[#656565] rounded-md w-fit md:w-full xl:w-[433px] focus:outline-none placeholder:text-sm placeholder:font-medium placeholder:text-[#656565]"
-                                    />
-                                </div>
-
-                                <nav
-                                    className="flex flex-col gap-4">
-                                    <Link href="/" className="text-black text-base font-medium hover:text-black">Home</Link>
-                                    <Link href="/about"
-                                          className="text-gray-400 text-base font-medium hover:text-black">About</Link>
-                                    <Link href="/contact" className="text-gray-400 text-base font-medium hover:text-black">Contact
-                                        Us</Link>
-                                    <Link href="/blog"
-                                          className="text-gray-400 text-base font-medium hover:text-black">Blog</Link>
-                                </nav>
-
-                                <div className="flex flex-row justify-between xl:flex-col gap-6">
-                                    <Link href="/favourite">
-                                        <Heart className="text-black hover:text-black cursor-pointer" size={32}
-                                               strokeWidth={1}/>
-                                    </Link>
-                                    <Link href="/cart">
-                                        <ShoppingCart className="text-black hover:text-black cursor-pointer" size={32}
-                                                      strokeWidth={1}/>
-                                    </Link>
-                                    <Link href="/sign-in">
-                                        <User className="text-black hover:text-black cursor-pointer" size={32}
-                                              strokeWidth={1}/>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-
-                    {/*Desktop */}
+                    {/* Navigation Links and Icons */}
                     <div className="hidden xl:flex items-center gap-10">
-                        <div className="relative max-w-md">
-                            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#989898]"
-                                    size={24}/>
-                            <Input
-                                type="text"
-                                placeholder="Search..."
-                                className="pl-12 pr-4 py-3 bg-[#F5F5F5] text-[#656565] rounded-md w-[433px] focus:outline-none placeholder:text-sm placeholder:font-medium"
-                            />
-                        </div>
-                        <nav
-                            className="flex gap-10">
+                        <nav className="flex gap-10">
                             <Link href="/" className="text-black text-base font-medium hover:text-black">Home</Link>
                             <Link href="/about"
                                   className="text-gray-400 text-base font-medium hover:text-black">About</Link>
@@ -100,6 +52,7 @@ export const Header = () => {
                             <Link href="/blog"
                                   className="text-gray-400 text-base font-medium hover:text-black">Blog</Link>
                         </nav>
+
                         <div className="flex gap-6">
                             <Link href="/favourite">
                                 <Heart className="text-black hover:text-black cursor-pointer" size={32}
@@ -110,12 +63,62 @@ export const Header = () => {
                                               strokeWidth={1}/>
                             </Link>
                             <Link href="/sign-in">
-                                <User className="text-black hover:text-black cursor-pointer" size={32}
-                                      strokeWidth={1}/>
+                                <User className="text-black hover:text-black cursor-pointer" size={32} strokeWidth={1}/>
                             </Link>
                         </div>
                     </div>
+
+                    {/* Mobile Menu Button */}
+                    <button onClick={toggleMenu} className="xl:hidden justify-self-end">
+                        {isMenuOpen ? (
+                            <X className="text-black cursor-pointer" size={32} strokeWidth={1}/>
+                        ) : (
+                            <Menu className="text-black cursor-pointer" size={32} strokeWidth={1}/>
+                        )}
+                    </button>
                 </div>
+
+                {/* Dropdown Menu for Mobile */}
+                {isMenuOpen && (
+                    <div className="xl:hidden bg-white z-50 shadow-lg mt-4 p-6">
+                        <div className="flex flex-col gap-6">
+                            <div className="relative">
+                                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#989898]"
+                                        size={24}/>
+                                <Input
+                                    type="text"
+                                    placeholder="Search..."
+                                    className="pl-12 pr-4 py-4 bg-[#F5F5F5] text-[#656565] rounded-md w-full focus:outline-none placeholder:text-sm placeholder:font-medium"
+                                />
+                            </div>
+
+                            <nav className="flex flex-col gap-4">
+                                <Link href="/" className="text-black text-base font-medium hover:text-black">Home</Link>
+                                <Link href="/about"
+                                      className="text-gray-400 text-base font-medium hover:text-black">About</Link>
+                                <Link href="/contact" className="text-gray-400 text-base font-medium hover:text-black">Contact
+                                    Us</Link>
+                                <Link href="/blog"
+                                      className="text-gray-400 text-base font-medium hover:text-black">Blog</Link>
+                            </nav>
+
+                            <div className="flex gap-6">
+                                <Link href="/favourite">
+                                    <Heart className="text-black hover:text-black cursor-pointer" size={32}
+                                           strokeWidth={1}/>
+                                </Link>
+                                <Link href="/cart">
+                                    <ShoppingCart className="text-black hover:text-black cursor-pointer" size={32}
+                                                  strokeWidth={1}/>
+                                </Link>
+                                <Link href="/sign-in">
+                                    <User className="text-black hover:text-black cursor-pointer" size={32}
+                                          strokeWidth={1}/>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
         </header>
     );
