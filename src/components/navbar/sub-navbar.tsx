@@ -4,7 +4,7 @@ import {Separator} from "@/components/ui/separator";
 export const SubNavbar = () => {
     return (
         <div className="py-4 bg-[#2E2E2E] min-w-full pt-[90px]">
-            <div className="w-full 2xl:max-w-[1320px] mx-auto px-[25px] lg:px-[100px]">
+            <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center gap-4 sm:gap-6 lg:gap-8">
                     <div className="flex items-center gap-4">
                         <Image
