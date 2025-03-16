@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-            <link rel="icon" href="/assets/navbar/favicon.png" />
+            <link rel="icon" href="/assets/images/navbar/favicon.png" />
             <title>e-Commerce App</title>
       </head>
       <body
