@@ -4,13 +4,13 @@ export default function HeroSection() {
     return (
         <div
             className="relative min-h-[632px] flex justify-center bg-cover bg-center min-w-full"
-            style={{backgroundImage: "url('/assets/hero-section/Banner.png')"}}
+            style={{backgroundImage: "url('/assets/images/hero-section/Banner.png')"}}
         >
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/30"></div>
 
-            <div className="container mx-auto relative z-10 px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full">
+            <div className="container mx-auto relative z-10 px-6 md:px-20 lg:max-w-[1000px] 2xl:max-w-[1300px]">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full pt-20 sm:pt-10 md:pt-10 lg:pt-2">
                     <div className="flex flex-col justify-center text-left text-white">
                         <p className="text-[25px] font-semibold sm:text-xl text-[#909090] mb-1">
                             Pro.Beyond.
@@ -33,7 +33,7 @@ export default function HeroSection() {
                     <div className="flex justify-end items-end h-full">
                         <div className="relative w-full h-[400px] lg:h-[500px]">
                             <Image
-                                src="/assets/hero-section/phone-image.png"
+                                src="/assets/images/hero-section/phone-image.png"
                                 alt="iPhone 14 Pro"
                                 fill
                                 className="object-contain object-bottom"
