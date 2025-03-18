@@ -6,6 +6,7 @@ import logo from "../../../public/assets/images/navbar/e-commerce-logo.png"
 import {Heart, Menu, Search, ShoppingCart, User, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {useState} from "react";
+import {Colors} from "@/constants/Colors";
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ export const Header = () => {
     };
 
     return (
-        <header className="bg-white min-w-full fixed top-0 z-50 shadow-lg">
+        <header className="min-w-full fixed top-0 z-50 shadow-lg" style={{backgroundColor: Colors.white}}>
             <div className="container mx-auto px-4 md:px-20 lg:max-w-[1000px] 2xl:max-w-[1300px]">
                 {/* Grid Layout for Desktop */}
                 <div className="grid grid-cols-[auto_1fr_auto] items-center gap-10 py-4">
