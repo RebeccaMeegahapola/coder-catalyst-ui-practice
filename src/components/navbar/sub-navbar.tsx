@@ -27,7 +27,6 @@ export default function SubNavbar() {
                                 />
                                 <span className="text-white text-base font-medium">{item.label}</span>
                             </div>
-                            {/* Hide separator on small screens and show on medium and larger screens */}
                             {index !== subNavItems.length - 1 && (
                                 <Separator orientation="vertical" className="h-6 bg-gray-600"/>
                             )}
