@@ -1,3 +1,4 @@
 export const Colors = {
-    primary: "#3498db",
+    white: "#FFFFFF",
+    searchIcon: "#989898",
 };
