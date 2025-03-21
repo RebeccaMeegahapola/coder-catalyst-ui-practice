@@ -3,6 +3,8 @@ import SubNavbar from "@/components/navbar/sub-navbar";
 import HeroSection from "@/sections/hero-section";
 import CategoryCards from "@/sections/category-cards";
 import Products from "@/sections/products";
+import DiscountSection from "@/sections/discount-section";
+import PopularItems from "@/components/products/popular-items";
 
 export default function Home() {
     return (
@@ -12,6 +14,8 @@ export default function Home() {
             <HeroSection />
             <CategoryCards />
             <Products />
+            <PopularItems />
+            <DiscountSection />
         </div>
     );
 }
