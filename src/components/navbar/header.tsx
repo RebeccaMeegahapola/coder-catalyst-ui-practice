@@ -33,25 +33,38 @@ export const Header = () => {
 
                     {/* Search Bar */}
                     <div className="relative hidden xl:block">
-                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#989898]"
-                                size={24}/>
+                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2"
+                            size={24}
+                            style={{color: Colors.searchIcon}}
+                        />
                         <Input
                             type="text"
                             placeholder="Search..."
-                            className="pl-12 pr-4 py-3 bg-[#F5F5F5] text-[#656565] rounded-md w-full focus:outline-none placeholder:text-sm placeholder:font-medium"
+                            className="pl-12 pr-4 py-3 rounded-md w-full focus:outline-none placeholder:text-sm placeholder:font-medium"
+                            style={{backgroundColor: Colors.searchBarBg, color: Colors.searchBarText}}
                         />
                     </div>
 
                     {/* Navigation Links and Icons */}
                     <div className="hidden xl:flex items-center gap-10">
                         <nav className="flex gap-10">
-                            <Link href="/" className="text-black text-base font-medium hover:text-black">Home</Link>
-                            <Link href="/about"
-                                  className="text-gray-400 text-base font-medium hover:text-black">About</Link>
-                            <Link href="/contact" className="text-gray-400 text-base font-medium hover:text-black">Contact
-                                Us</Link>
-                            <Link href="/blog"
-                                  className="text-gray-400 text-base font-medium hover:text-black">Blog</Link>
+                            <Link href="/" className="text-base font-medium hover:text-black"
+                                  style={{color: Colors.black}}
+                            >
+                                Home
+                            </Link>
+                            <Link href="/about" className="text-gray-400 text-base font-medium hover:text-black"
+                            >
+                                About
+                            </Link>
+                            <Link href="/contact" className="text-gray-400 text-base font-medium hover:text-black"
+                            >
+                                Contact Us
+                            </Link>
+                            <Link href="/blog" className="text-gray-400 text-base font-medium hover:text-black"
+                            >
+                                Blog
+                            </Link>
                         </nav>
 
                         <div className="flex gap-6">
