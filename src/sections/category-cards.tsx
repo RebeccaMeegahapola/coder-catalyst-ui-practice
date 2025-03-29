@@ -11,11 +11,11 @@ const CategoryItems = [
 ]
 export default function CategoryCards() {
     return (
-        <div className="bg-[#FAFAFA] min-w-full py-20">
+        <div className="bg-[#FAFAFA] min-w-full py-10 sm:py-20">
             <div className="container mx-auto px-4 md:px-20 lg:max-w-[1000px] 2xl:max-w-[1300px]">
-                <div className="p-6">
+                <div className="p-1 sm:p-6">
                     <div className="flex justify-between items-center mb-7">
-                        <h2 className="text-2xl font-medium text-black">Browse By Category</h2>
+                        <h2 className="text-lg md:text-2xl font-medium text-black">Browse By Category</h2>
                         <div className="flex gap-2">
                             <button className="text-black">
                                 <ChevronLeft size={32}/>
