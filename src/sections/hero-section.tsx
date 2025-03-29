@@ -9,7 +9,7 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-black/30"></div>
 
             <div className="container mx-auto relative z-10 px-6 lg:max-w-[1000px] 2xl:max-w-[1300px]">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full pt-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full pt-32 sm:pt-16">
                     <div className="text-center lg:text-left text-white flex flex-col justify-center">
                         <p className="text-[25px] font-semibold sm:text-xl text-[#909090] mb-1">
                             Pro.Beyond.
