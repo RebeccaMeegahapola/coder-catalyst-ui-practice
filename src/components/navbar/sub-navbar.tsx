@@ -12,7 +12,7 @@ const subNavItems = [
 
 export default function SubNavbar() {
     return (
-        <div className="py-4 bg-[#2E2E2E] min-w-full pt-[90px]">
+        <div className="py-4 bg-[#2E2E2E] min-w-full pt-[90px] hidden md:block">
             <div className="container mx-auto px-4 md:px-20 lg:max-w-[1000px] 2xl:max-w-[1300px]">
                 <div className="flex flex-wrap justify-center gap-4 xl:justify-between sm:gap-6 lg:gap-8">
                     {subNavItems.map((item, index) => (
