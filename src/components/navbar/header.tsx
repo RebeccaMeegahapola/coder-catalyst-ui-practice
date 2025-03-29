@@ -19,7 +19,7 @@ export const Header = () => {
         <header className="min-w-full fixed top-0 z-50 shadow-lg" style={{backgroundColor: Colors.white}}>
             <div className="container mx-auto px-4 md:px-20 lg:max-w-[1000px] 2xl:max-w-[1300px]">
                 {/* Grid Layout for Desktop */}
-                <div className="grid grid-cols-[auto_1fr_auto] items-center gap-10 py-4">
+                <div className="grid grid-cols-[auto_1fr_auto] items-center gap-0 sm:gap-10 py-4">
                     {/* Logo */}
                     <Link href="/">
                         <Image
