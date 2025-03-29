@@ -6,6 +6,8 @@ import Products from "@/sections/products";
 import DiscountSection from "@/sections/discount-section";
 import PopularItems from "@/components/products/popular-items";
 import FooterBanner from "@/sections/footer-banner";
+import Footer from "@/components/footer/footer";
+import ProductCategories from "@/sections/product-categories";
 
 export default function Home() {
     return (
@@ -13,11 +15,13 @@ export default function Home() {
             <Header />
             <SubNavbar />
             <HeroSection />
+            <ProductCategories />
             <CategoryCards />
             <Products />
             <PopularItems />
             <DiscountSection />
             <FooterBanner />
+            <Footer />
         </div>
     );
 }
